@@ -1,10 +1,10 @@
 ## Scratch Viz
 
-This experimental [ScratchX]() extension aims to make data visualization more accessible to a wider audience.  More than that however, this extension is an exploration of proper abstractions for data visualization concepts in an effort to teach more effectively.
+This experimental [ScratchX](http://scratchx.org/) extension aims to make data visualization more accessible to a wider audience.  More than that however, this extension is an exploration of proper abstractions for data visualization concepts in an effort to teach more effectively.
 
 ## Getting Started
 
-Install as sdfsd
+See the [user documentation](http://jay-oh-en.github.io/scratch-viz/index.html) or head over to the wiki for the [developer documentation](https://github.com/Jay-Oh-eN/scratch-viz/wiki).
 
 ## Developers
 
@@ -12,7 +12,7 @@ From its inception, the Scratch Viz project has been designed to be modular to e
 
 ### Architecture
 
-Scratch Viz is inspired by the principles of Wilkinson's [Grammar of Graphics]() and by making the distinction between the data layer and the aesthetic layer, visualizations are inherently modular and flexible. To learn more about the Grammar of Graphics see the [wiki]() for references and resources. As such, there are only a few fundamental components necessary to understand the extension which can be composed to create more complex programs and visualizations:
+Scratch Viz is inspired by the principles of Wilkinson's [Grammar of Graphics](http://www.amazon.com/The-Grammar-Graphics-Statistics-Computing/dp/0387245448) and by making the distinction between the data layer and the aesthetic layer, visualizations are inherently modular and flexible. As such, there are only a few fundamental components necessary to understand the extension which can be composed to create more complex programs and visualizations:
 
 * Data blocks
     * Loading (CSV, TSV, JSON)
@@ -26,19 +26,19 @@ Scratch Viz is inspired by the principles of Wilkinson's [Grammar of Graphics]()
 This repository is structured to allow easy extension and contribution of new visual and data blocks.
 
     blocks/             Folder containing ScratchX block definitions
-    docs/               sdfsdf
-    examples/           fsdfsd
-    test/               wdfsdfsd
-    index.js            dfgdfg
+    docs/               Documentation
+    examples/           Example Scratch projects (`.sbx` files)
+    test/               Unit tests for the custom blocks
+    index.js            ScratchX extension specification
 
 ### Contributing
 
 To contribute a new block (new aggregation, data loading, channel, etc.):
 
-1. [Fork]() this repository.
+1. [Fork](#) this repository.
 2. Add an extension file to the `blocks/` directory
-    * Look at the existing [template.js]() file for a reference of the expected structure
-3. Write a test file using [Jasmine]() in the `test/` directory using [Fixtures]()
+    * Look at the existing [template.js](#) file for a reference of the expected structure
+3. Write a test file using [tape](https://github.com/substack/tape) in the `test/` directory.
 4. Create a documentation file describing its intended use. Name it accordingly.
     * Use [scratchblocks](http://scratchblocks.github.io/) to create an example of how to use the block.
     * Create a example project and upload a [SBX]() file that uses your new block to the `examples/` directory.
@@ -67,7 +67,7 @@ __Notes: Cannot currently support spaces in headers or fields.  You must surroun
 * Implement library (developer facing) architecture
     * `window.open()`
     * `window.postMessage()`
-    * Rendering/drawing handled by [Vega]()
+    * Rendering/drawing handled by [Vega](vega.github.io)
         * Declarative in nature
         * Serializable as standard JSON (to send with `postMessage()`)
     * Internal `viz` object to keep state
@@ -109,9 +109,9 @@ __Notes: Cannot currently support spaces in headers or fields.  You must surroun
         - [ ] Encourage sharing of open data
 - [ ] Add alerts when blocks are not combined right
     - [ ] Static analysis of Grammar
-- [ ] Write documentation
+- [x] Write documentation
     - [ ] Basic Getting Started Tutorial
-    - [ ] Reference projects (`.sbx`) for each chart type
+    - [x] Reference projects (`.sbx`) for each chart type
     - [ ] Bl.ocks.org reference of Vega output (with image of blocks to generate it)
     - [ ] Create Math curriculum
         - [ ] Make interactive version of Khan Academy videos
@@ -142,7 +142,7 @@ __Notes: Cannot currently support spaces in headers or fields.  You must surroun
 - [ ] Create range block to specify output range of block scale
 - [ ] Automated CI integration with Travis
 - [ ] Whitespace in input cells?
-- [ ] Modularize block specifications with [rollup.js]()
+- [ ] Modularize block specifications with [rollup.js](http://rollupjs.org/)
 - [ ] Verify syntax with JSlint
 - [ ] Write a style guide
 
@@ -175,10 +175,10 @@ __Notes: Cannot currently support spaces in headers or fields.  You must surroun
 - [ ] Remixability (and lineage tracking)
 - [ ] Anonymous analytics into how people are using the custom blocks
 - [ ] Composability + Abstraction
-    - [ ] Allow users to use Scratch-Viz blocks in their own custom blocks. Open possibility for Scratchers (without using Javascript) to define their own charts.
+    - [x] Allow users to use Scratch-Viz blocks in their own custom blocks. Open possibility for Scratchers (without using Javascript) to define their own charts.
 - [ ] Integrate with [Mesh](http://wiki.scratch.mit.edu/wiki/Mesh)
 
 ## License
 
-* Code: MIT
-* Content: CC 4.0
+* Code: [MIT License](LICENSE)
+* Content: <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Scratch Viz</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jonathan Dinu</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
