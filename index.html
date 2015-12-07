@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/paper_img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <title>Scratch Viz Extension</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/ct-paper.css" rel="stylesheet"/>
+    <link href="assets/css/demo.css" rel="stylesheet" /> 
+        
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+      
+    <style>
+        .alert {
+            margin-bottom: 0px;
+        }
+
+        li {
+            margin: 20px auto;
+        }
+
+        ol li p, ul li p {
+            margin: 10px auto;
+        }
+
+        body p {
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="demo-header">
+        <div class="motto">
+          <header>
+            <h1>Scratch Viz</h1>
+            <h3>Documentation and Usage</h3>
+          </header>
+      </div>
+  </div>
+  <div class="main">
+    <div class="section section-nude">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <h2>Contents</h2>
+
+                  <ul id="nav">
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#audience">Audience</a></li>
+                    <li><a href="#getting-started">Getting Started</a></li>
+                    <li><a href="#data">Data</a></li>
+                    <li><a href="#blocks">Scratch Blocks</a></li>
+                    <li><a href="#examples">Example Projects</a></li>
+                  </ul>
+
+                  <a name="intro"></a><h2>Introduction</h2>
+                  <blockquote>
+                    If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.<br /><br />
+                    <small>Henry David Thoreau</small>
+                  </blockquote>
+
+                  <img style="width: 100%" src="http://poignant.guide/images/dr.cham-3.jpg" alt="_why's poignant guide" />
+                  <div class="img-details">
+                    <small class="pull-right">Source: <a href="http://poignant.guide" alt="_why's poignant guide" target="_blank">Why's (Poignant) Guide to Ruby</small></a>
+                  </div>
+
+                  <p>This experimental <a href="https://scratch.mit.edu/" target="_blank">Scratch</a> extension aims to make data visualization more accessible to a wider audience.  More than that however, this extension is an exploration of teaching the abstract and theoretical underpinnings of data visualization through playful experimentation.</p>
+
+                  <p>It is powered by <a href="http://vega.github.io/vega/" target="_blank">Vega</a>, a visualization library built on <a href="http://d3js.org/" target="_blank">D3.js</a> for creating interactive graphics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="alert alert-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <p>If you have any questions on the extension's use please reach out to <b>jondinu [at] gmail.com</b>.</p>
+
+                    <p>Especially if you are a developer and would like to extend it, or you are a teacher and you would like to use it in your classroom.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="main">
+    <div class="section section-nude">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                  <a name="audience"></a><h2>Audience</h2>
+                    <blockquote>
+                    Is Scratch Viz right for me? And how might I use it?
+                  </blockquote>
+
+                  <p>There are a number of ways to leverage this extension and it seeks to accomplish the following 4 goals for it's community:
+
+                  <ol>
+                    <li>
+                        <p>Teach kids and novices about <span class="label label-info">data</span>, <span class="label label-warning">analysis</span>, and <span class="label label-success">visualization</span> by making the abstract concrete.</p>
+                    </li>
+                    <li>
+                        <p>Encourage (and inspire) kids to learn <span class="label label-danger">math and science</span> concepts through creative exploration.</p>
+                        <p>See the <a href="#math-and-science">Math and Science</a> exercises in the example projects below.</p>
+                    </li>
+                    <li>
+                        <p>Empower non-technical individuals (designers and artists) with an easy to use, yet flexible tool to create professional data graphics.</p>
+                        <p>See <a href="#export">Saving and Exporting</a> graphics.</p>
+                    </li>
+                    <li>
+                        <p>Provide a rapid prototyping and sketching tool for experienced (technical) data visualization professionals by decreasing the overhead to experiment with a "visual language".</p>
+                        <p>See <a href="https://github.com/Jay-Oh-eN/scratch-viz#contributing" target="_blank">Extending Scratch Viz</a> for custom visualizations.</p>
+                    </li>
+                  </ol>
+
+                  <a name="getting-started"></a><h2 style="margin: 75px auto -10px auto">Getting Started</h2>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="alert alert-danger">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+            <p>The quickest way to get up and running is to find an <a href="#examples" style="color:#7CE4FE"><b>example below</b></a> that uses a similar chart type and extend it to use your own data.</p>
+         </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="main">
+    <div class="section section-nude">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+      <p>To get started created visualizations, all you need is a web browser (and potentially some data): <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/index.js">Launch the <b>Scratch Viz</b> extension on ScratchX</a>.</p>
+
+      <p>Once you are in the Scratch editor, you can begin creating visualizations by building them up with the custom blocks that this extension defines.  To render the visualization, this extension uses another popup window (outside of the Scratch editor).</p>
+
+      <p>To learn more about the extension and see what possibilities it offers, please see the: <li><a href="#examples">Examples</a></li></p>
+<!--       <ul>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="#examples">Examples</a></li>
+    </ul> -->
+
+    <blockquote>
+      Google Chrome, Firefox, and Safari web browsers (any modern browser really) should all work with this extension.
+</blockquote>
+
+      <a name="data"></a><h2>Data</h2>
+
+      <p>Using the extension, there are two options for data to use in your visualizations:</p>
+      <ul>
+        <li>Synthetic Data (generated with Scratch itself)</li>
+        <li>External Datasets (CSV or TSV)</li>
+      </ul>
+
+      <p>If you would simply like to experiment with the extension and basic charts (without having to worry about messy data and data formats), you can create your own data with Scratch control blocks and <a href="http://wiki.scratch.mit.edu/wiki/Data_Blocks" target="_blank">Data Blocks</a>.  Look at the <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Getting Started Demo</a> for an example of how to do this for a scatterplot.</p>
+
+      <p>Generated data is often easier to get started with, but to create a visualization that is informative you will need to incorporate external data.  Again you will use <b>Scratch Data Blocks</b> and create a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>.  This time however you will not populate its values with a loop, but if you <span class="label label-success">right click</span> on the list in the Scratch canvas it should open a dialog to <b>import</b> a file.  This works with delimited tabular files (CSV and TSV) and prompts you to select a column to import.
+      <br />
+      <br />
+      <img src="images/charts/import.png" style="width: 100%"/>
+
+      <blockquote>Each of these lists will represent one dimension to visualize.</blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="alert alert-success">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+            <p>I have provided a number of datasets in the <a href="https://github.com/Jay-Oh-eN/scratch-viz/tree/gh-pages/data">Github repository</a> which have been parsed and cleaned to work with this extension.  Please refer to the <a href="https://github.com/Jay-Oh-eN/scratch-viz/blob/gh-pages/data/readme.md">data documentation</a> for information on what the datasets represent and download the files locally from the Github repository (or from this site).</p>
+         </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="main">
+    <div class="section section-nude">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+      <a name="blocks"></a><h2>Scratch Blocks</h2>
+          
+      <p>This extension defines a number of <a href="http://wiki.scratch.mit.edu/wiki/Custom_Blocks" target="_blank">Custom Blocks</a> which each represent a <a href="https://www.targetprocess.com/articles/visual-encoding/" target="_blank">visual encoding</a> that can be composed to create a number of visualizations.  Each of these blocks can be grouped into one of the following categories:</p>
+      <ul>
+        <li><a href="#core">Core</a></li>
+        <li><a href="#marks">Marks</a></li>
+        <li><a href="#channels">Channels</a></li>
+        <li><a href="#scales">Scales</a></li>
+        <li><a href="#annotation">Annotation</a></li>
+      </ul>
+      <p>There are only a few rules to follow in order to make a sensible visualization and ensure that the extension works successfully.  Again, the best way to get started quickly is to start from an <a href="#examples">example</a>, but as long as you obey the following you should be fine:</p>
+
+      <img src="images/charts/example.png" style="height: 400px"/>
+
+      <ul>
+        <li>Start with a <span class="label label-info">Chart</span> block.</li>
+        <li>Use <span class="text-danger">one</span> (and only one) <a href="marks"><b>mark</b></a> block.</li>
+        <li>You are required to use exactly <span class="text-danger">one</span> <span class="label label-success">x</span> and exactly <span class="text-danger">one</span> <span class="label label-success">y</span> block.</li>
+        <li>End with a <span class="label label-info">draw</span> block.</a></li>
+      </ul>
+    </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="alert alert-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center"><p>
+            If you would like to learn more about the visualization theory that underlies the extension and blocks, the following resources are great introductions: <a href="http://www.cs.ubc.ca/~tmm/talks/minicourse14/vad15d3unconf.pdf" target="_blank">Visualization Analysis and Design</a> and <a href="http://www.cs171.org/2015/assets/slides/05-marks_channels.pdf" target="_blank">The Visualization Alphabet</a></p>
+   </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="main">
+    <div class="section section-nude">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+      <a name="core"></a><h3>Core</h3>
+
+      <blockquote>
+        The following two blocks ( <span class="label label-info">Chart</span> and <span class="label label-info">draw</span> ) are essential for any project.
+      </blockquote>
+      <br />
+
+      <div class="block">
+          <img src="images/blocks/chart_block.png" />
+          <p>The block defines the visualization and creates the pop-up window to display the chart. This should be the first block.</p>
+          <ul>
+            <li><b>width</b>: the width of the chart in # of pixels</li>
+            <li><b>height</b>: the height of the chart in # of pixels</li>
+          </ul>
+
+        <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/draw_block.png" />
+          <p>Block with triggers the visualization to draw once all of its component blocks have been assembled.  This block should come last.</p>
+
+        <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
+      </div>
+
+      <br />
+
+      <a name="marks"></a><h3>Marks</h3>
+    
+      <blockquote>
+        Mark blocks define the geometry to use in a visualization to represent each data point.  In a project, you are restricted to only use <span class="text-danger">one</span> <b>mark</b> block.
+      </blockquote>
+        <br />
+      <div class="block">
+          <img src="images/blocks/circle_block.png" />
+          <p>Use a circle to represent each data point to create a scatterplot.</p>
+
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
+      </div>
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/rectangle_block.png" />
+          <p>Use a rectangle to represent each data point to create a bar chart. The <span class="label label-success">x</span> <b>Channel</b> block needs to use an <span class="label label-success">ordinal</span> <a href="#scales"><b>scale</b></a>.</p>
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/bar_chart.sbx">Demo</a>
+      <hr />
+      </div>
+
+      <div class="block">
+      <img src="images/blocks/line_block.png" />
+      <p>Use a line to represent each data point to create a line chart.</p>
+      
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/line_chart.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/area_block.png" />
+          <p>Use an line with shaded area to represent each data point and create a area chart.</p>
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/area_chart.sbx">Demo</a>
+  </div>
+      <br />
+
+      <a name="channels"></a><h3>Channels</h3>
+
+      <blockquote>
+        Channels correspond to a visual encoding to use based on an attribute (or column).  Channels can depend on <span class="text-info">quantitative</span> or <span class="text-info">categorical</span> data types.
+      </blockquote>
+        <br />
+
+      <div class="block">
+          <img src="images/blocks/x_block.png" />
+          <p>Specify which data attribute/column to use as the <b>x</b> position of the <a href="#marks"><b>Marks</b></a></p>
+          <ul>
+            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot on the horizontal dimension.</li>
+          </ul>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+
+      <div class="block">
+          <img src="images/blocks/y_block.png" />
+          <p>Specify which data attribute/column to use as the <b>y</b> position of the <a href="#marks"><b>Marks</b></a></p>
+          <ul>
+            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot on the vertical dimension.</li>
+          </ul>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/size_block.png" />
+          <p>Specify which data attribute/column to use as the <b>size</b>of the <a href="#marks"><b>Marks</b></a>. Currently only controls the radius of the <span class="label label-success">circle</span> <b>mark</b>.</p>
+          <ul>
+            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to scale the radius of the circles.</li>
+            <li><b>min</b>: the minimum radius in # of pixels for the range.</li>
+            <li><b>max</b>: the maximum radius in # of pixels for the range</li>
+          </ul>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/bubble_chart.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/color_block.png" />
+          <p>Specify which data attribute/column to use as the <b>color</b>of the <a href="#marks"><b>Marks</b></a>. Best used with categorical or ordinal values.</p>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/color_scatter.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <a name="scales"></a><h3>Scales</h3>
+      <blockquote>
+        Scale blocks map from an input domain (data values) to an output range (pixel values).
+      </blockquote>
+      <br />
+      <div class="block">
+          <img src="images/blocks/log_block.png" />
+          <p>Apply a logarithmic (base 10) transform a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values.</p>
+          <blockquote>
+            pixel_value = log_10(data_value)
+          </blockquote>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/log_scatter.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/ordinal_block.png" />
+        <p>Specify that a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values are discrete/categorical or used to transform quantitative values into categorical.</p>
+
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/bar_chart.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/time_block.png" />
+          <p>Transform a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values of strings representing dates into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date objects</a>.  Has the effect of ordering the values chronologically and making the values quantitative.</p><p>Currently cannot handle extra whitespace in column values outside of quotes.  If the date string have a space in them you must enclose the field in quotations.</p>
+
+      <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/trees.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/power_block.png" />
+          <p>Apply an exponential transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values</p> according to a specified <b>exponent</b>.
+          <ul>
+            <li><b>exponent</b>: the power to raise each data value to.  For example, an exponent of 2 would be a quadratic scaling.</li>
+          </ul>
+          <blockquote>
+            pixel_value = (data_value)^exponent
+          </blockquote>
+          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/power_scale.sbx">Demo</a>
+      </div>
+
+      <hr />
+
+      <div class="block">
+          <img src="images/blocks/sqrt_block.png" />
+          <p>Apply an square root transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values</p>. For example, an exponent of 2 would be a quadratic scaling.  This is equivalent to a power scale of 0.5.
+          <blockquote>
+            pixel_value = (data_value)^0.5
+          </blockquote>
+         <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/sqrt_scale.sbx">Demo</a>
+       </div>
+
+      <hr />
+
+      <a name="annotation"></a><h3>Annotation</h3>
+      <blockquote>
+        Annotation blocks add context to a visualization through text labels.
+      </blockquote>
+      <br />
+      <div class="block">
+          <img src="images/blocks/title_block.png" />
+          <p>Annotate a chart with a title.</p>
+        <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/trees_title.sbx">Demo</a>
+      </div>
+      <br />
+      <a name="examples"></a><h2>Example Projects</h2>
+        <br />
+        <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Your First Chart</a></dt>
+        <dd>In this example, learn how to create your first chart by using Scratch <a href="http://wiki.scratch.mit.edu/wiki/Data_Blocks" target="_blank">Data Blocks</a> to create an artificial dataset to visualize.</dd>
+        <br />
+
+        <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scratch_statistics.sbx">Choosing the Right Chart</a></dt>
+        <dd>Often it takes experimentation to figure out which chart best represents your data visually.  In this example, see how to define your own <a href="http://wiki.scratch.mit.edu/wiki/Custom_Blocks">Custom Blocks</a> to create your own scatterplot, line chart, bar chart, area chart by visualizing statistics about the <a href="https://scratch.mit.edu/statistics/" target="_blank">Scratch</a> project itself.</dd>
+        <br />
+        <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/cars.sbx">Visualizing More than 2 Columns</a></dt>
+        <dd>Often charts and visualizations only represent two columns of a dataset, since screens only have two spatial dimensions: <b>x</b> and <b>y</b>. In this example see how to leverage additional visual encodings (size and color) to visualize four columns of a dataset of cars.
+        </dd>
+        <br />
+        <!-- <dt><a target="_new" href="http://scratchx.org/?url=http://ericrosenbaum.github.io/tone-synth-extension/examples/Synth%20Racer.sbx">Creating Synthetic Data</a></dt>
+        <dd>Sometimes you either programmatically generate data according to some distribution or simply want to experiment with fake data to test out a graphic.  In this example learn how to use Scratch <a href="">Data Blocks</a> to to create an artificial dataset to then visualize.</dd>
+        <br /> -->
+
+      <a name="math-and-science"></a><h4>Math and Science</h4>
+      <dt><a target="_new" href="#">Geometry</a></dt>
+      <dd>Coming soon!</dd>
+        <br />
+        <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/icesheet_levels.sbx">Global Warming</a></dt>
+        <dd>Learn about how the earth has been warming at an exceptional rate in that past few decades as a result of human influence.  In this example, visualize the ice sheet levels for Greenland and Antarctica.</dd>
+        <br />
+        <dt><a target="_new" href="#">Statistics</a></dt>
+        <dd>Coming soon!</dd>
+        <br />
+
+        <a name="export"></a><h2>Exporting Visualizations</h2>
+        <br />
+        <p>Visualizing charts and graphics in your browser is great, but often you want to share what you have created.  Build into the visualization is an easy way to save your chart to a image on your computer.</p>
+
+        <p>Simply click the <code>Save Chart</code> button right below the figure and it will render the canvas to a PNG image file and download it locally on your computer.  Soon you will also be able to export the Vega specification which generated the chart as well.</p>
+
+        <img src="images/charts/export.png" style="width: 100%" />
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer-demo section-dark">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Jay-Oh-eN/scratch-viz/wiki" target="_blank">
+                           Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jay-Oh-eN/scratch-viz" target="_blank">
+                            Code
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright pull-right">
+                © 2015, made with <i class="fa fa-heart heart"></i> by <a href="http://hopelessoptimism.com" target="_blank">Jonathan Dinu</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+
+<script src="bootstrap3/js/bootstrap.js" type="text/javascript"></script>
+
+<!-- Plugins -->
+<script src="assets/js/ct-paper-checkbox.js"></script>
+<script src="assets/js/ct-paper-radio.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="assets/js/ct-paper.js"></script>
+</html>
