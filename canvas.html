@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.4.0/vega.min.js"></script>
+        <script src="http://vega-lite.surge.sh/vega-lite.min.js"></script>
+        
+        <div id="vis"></div>
+
+        <script>
+        function receiveMessage(event) {
+            if (event.origin !== "http://scratchx.org")
+                return;
+
+            console.log(event.data);
+
+            //var vgSpec = vl.compile(event.data);
+            vg.parse.spec(event.data, function(chart) {
+                chart({el:"#vis"}).update();
+
+                if(d3.select('#save_fig').empty()) {
+                    var chart_width = parseFloat(d3.select('canvas')
+                                                .style('width'));
+
+                    var save_chart = d3.select('body')
+                                      .append('button')
+                                      .attr('id', 'save_fig')
+                                      .text("Save Chart");
+
+                    var btn_width = parseFloat(save_chart.style('width'));
+                    var margin = chart_width / 2 - btn_width / 4;
+
+                    save_chart.style('margin-left', margin + 'px')
+                              .style('margin-top', '50px');
+
+                    // save as image:
+                    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Using_the_download_attribute_to_save_a_canvas_as_a_PNG
+                    save_chart.on("click", function(){
+                        var canvas = document.querySelector("canvas");
+                        var context = canvas.getContext("2d");
+                        var png = canvas.toDataURL("image/png");
+                        var a = document.createElement("a");
+                        a.download = "my_scratch_viz.png";
+                        a.href = png;
+                        a.click();
+                    });
+                }
+            });
+        }
+
+        window.addEventListener("message", receiveMessage, false);
+
+        window.addEventListener("load", function(event) {
+            console.log('Window done loading... passing control back to opener');
+
+            window.opener.postMessage("loaded", "http://scratchx.org");
+        });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
