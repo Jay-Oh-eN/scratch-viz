@@ -248,7 +248,7 @@
 
       <div class="block">
           <img src="images/blocks/chart_block.png" />
-          <p>The block defines the visualization and creates the pop-up window to display the chart. This should be the first block.</p>
+          <p>Defines the visualization and creates the pop-up window to display the chart. This should be the first block.</p>
           <ul>
             <li><b>width</b>: the width of the chart in # of pixels</li>
             <li><b>height</b>: the height of the chart in # of pixels</li>
@@ -261,7 +261,7 @@
 
       <div class="block">
           <img src="images/blocks/draw_block.png" />
-          <p>Block with triggers the visualization to draw once all of its component blocks have been assembled.  This block should come last.</p>
+          <p>Block that triggers the visualization to draw once all of its component blocks have been assembled.  This block should come last.</p>
 
         <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
       </div>
@@ -300,7 +300,7 @@
 
       <div class="block">
           <img src="images/blocks/area_block.png" />
-          <p>Use an line with shaded area to represent each data point and create a area chart.</p>
+          <p>Use an line with shaded area to represent each data point and create an area chart.</p>
       <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/area_chart.sbx">Demo</a>
   </div>
       <br />
@@ -316,7 +316,7 @@
           <img src="images/blocks/x_block.png" />
           <p>Specify which data attribute/column to use as the <b>x</b> position of the <a href="#marks"><b>Marks</b></a></p>
           <ul>
-            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot on the horizontal dimension.</li>
+            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot as the horizontal dimension.</li>
           </ul>
           <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
       </div>
@@ -328,7 +328,7 @@
           <img src="images/blocks/y_block.png" />
           <p>Specify which data attribute/column to use as the <b>y</b> position of the <a href="#marks"><b>Marks</b></a></p>
           <ul>
-            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot on the vertical dimension.</li>
+            <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to plot as the vertical dimension.</li>
           </ul>
           <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scatterplot.sbx">Demo</a>
       </div>
@@ -337,7 +337,7 @@
 
       <div class="block">
           <img src="images/blocks/size_block.png" />
-          <p>Specify which data attribute/column to use as the <b>size</b>of the <a href="#marks"><b>Marks</b></a>. Currently only controls the radius of the <span class="label label-success">circle</span> <b>mark</b>.</p>
+          <p>Specify which data attribute/column to use as the <b>size</b> of the <a href="#marks"><b>Mark</b></a>. Currently only controls the radius of the <span class="label label-success">circle</span> <b>mark</b>.</p>
           <ul>
             <li><b>column</b>: a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a> which contains the values to scale the radius of the circles.</li>
             <li><b>min</b>: the minimum radius in # of pixels for the range.</li>
@@ -350,7 +350,7 @@
 
       <div class="block">
           <img src="images/blocks/color_block.png" />
-          <p>Specify which data attribute/column to use as the <b>color</b>of the <a href="#marks"><b>Marks</b></a>. Best used with categorical or ordinal values.</p>
+          <p>Specify which data attribute/column to use as the <b>color</b> of the <a href="#marks"><b>Mark</b></a>. Best used with categorical or ordinal values.</p>
           <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/color_scatter.sbx">Demo</a>
       </div>
 
@@ -363,9 +363,9 @@
       <br />
       <div class="block">
           <img src="images/blocks/log_block.png" />
-          <p>Apply a logarithmic (base 10) transform a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values.</p>
+          <p>Apply a logarithmic (base 10) transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values.</p>
           <blockquote>
-            pixel_value = log_10(data_value)
+            pixel_value = m * log_10(data_value) + b
           </blockquote>
           <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/log_scatter.sbx">Demo</a>
       </div>
@@ -374,7 +374,7 @@
 
       <div class="block">
           <img src="images/blocks/ordinal_block.png" />
-        <p>Specify that a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values are discrete/categorical or used to transform quantitative values into categorical.</p>
+        <p>Specify that a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values are discrete/categorical or use to transform quantitative values into categorical.</p>
 
       <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/bar_chart.sbx">Demo</a>
       </div>
@@ -383,7 +383,7 @@
 
       <div class="block">
           <img src="images/blocks/time_block.png" />
-          <p>Transform a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values of strings representing dates into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date objects</a>.  Has the effect of ordering the values chronologically and making the values quantitative.</p><p>Currently cannot handle extra whitespace in column values outside of quotes.  If the date string have a space in them you must enclose the field in quotations.</p>
+          <p>Transform a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values of strings representing dates into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date objects</a>.  Has the effect of ordering the values chronologically and making the values quantitative.</p><p>Currently cannot handle extra whitespace in column values outside of quotes.  If the date strings have a space in them you must enclose the field in quotations.</p>
 
       <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/trees.sbx">Demo</a>
       </div>
@@ -392,12 +392,12 @@
 
       <div class="block">
           <img src="images/blocks/power_block.png" />
-          <p>Apply an exponential transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values</p> according to a specified <b>exponent</b>.
+          <p>Apply an exponential transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values according to a specified <b>exponent</b>.</p>
           <ul>
             <li><b>exponent</b>: the power to raise each data value to.  For example, an exponent of 2 would be a quadratic scaling.</li>
           </ul>
           <blockquote>
-            pixel_value = (data_value)^exponent
+            pixel_value = m * (data_value)^exponent + b
           </blockquote>
           <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/power_scale.sbx">Demo</a>
       </div>
@@ -406,9 +406,9 @@
 
       <div class="block">
           <img src="images/blocks/sqrt_block.png" />
-          <p>Apply an square root transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values</p>. For example, an exponent of 2 would be a quadratic scaling.  This is equivalent to a power scale of 0.5.
+          <p>Apply an square root transform to a <a href="http://wiki.scratch.mit.edu/wiki/List_Blocks" target="_blank">List Block</a>'s values. For example, an exponent of 2 would be a quadratic scaling.  This is equivalent to a power scale of 0.5.</p>
           <blockquote>
-            pixel_value = (data_value)^0.5
+            pixel_value = m * (data_value)^0.5 + b
           </blockquote>
          <a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/sqrt_scale.sbx">Demo</a>
        </div>
@@ -433,7 +433,7 @@
         <br />
 
         <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/scratch_statistics.sbx">Choosing the Right Chart</a></dt>
-        <dd>Often it takes experimentation to figure out which chart best represents your data visually.  In this example, see how to define your own <a href="http://wiki.scratch.mit.edu/wiki/Custom_Blocks">Custom Blocks</a> to create your own scatterplot, line chart, bar chart, area chart by visualizing statistics about the <a href="https://scratch.mit.edu/statistics/" target="_blank">Scratch</a> project itself.</dd>
+        <dd>Often it takes experimentation to figure out which chart best represents your data visually.  In this example, see how to define your own <a href="http://wiki.scratch.mit.edu/wiki/Custom_Blocks">Custom Blocks</a> to create a scatterplot, line chart, bar chart, and area chart to visualizing statistics about the <a href="https://scratch.mit.edu/statistics/" target="_blank">Scratch</a> project itself!</dd>
         <br />
         <dt><a target="_new" href="http://scratchx.org/?url=http://jay-oh-en.github.io/scratch-viz/examples/cars.sbx">Visualizing More than 2 Columns</a></dt>
         <dd>Often charts and visualizations only represent two columns of a dataset, since screens only have two spatial dimensions: <b>x</b> and <b>y</b>. In this example see how to leverage additional visual encodings (size and color) to visualize four columns of a dataset of cars.
@@ -456,7 +456,7 @@
 
         <a name="export"></a><h2>Exporting Visualizations</h2>
         <br />
-        <p>Visualizing charts and graphics in your browser is great, but often you want to share what you have created.  Build into the visualization is an easy way to save your chart to a image on your computer.</p>
+        <p>Visualizing charts and graphics in your browser is great, but often you want to share what you have created.  Built into the extension is an easy way to save your chart to a image on your computer.</p>
 
         <p>Simply click the <code>Save Chart</code> button right below the figure and it will render the canvas to a PNG image file and download it locally on your computer.  Soon you will also be able to export the Vega specification which generated the chart as well.</p>
 
