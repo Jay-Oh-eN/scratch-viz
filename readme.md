@@ -4,7 +4,7 @@ This experimental [ScratchX](http://scratchx.org/) extension aims to make data v
 
 ## Getting Started
 
-See the [user documentation](http://jay-oh-en.github.io/scratch-viz/index.html) or head over to the wiki for the [developer documentation](https://github.com/Jay-Oh-eN/scratch-viz/wiki).
+See the [user documentation](https://hopelessoptimism.github.io/scratch-viz/index.html) or head over to the wiki for the [developer documentation](https://github.com/hopelessoptimism/scratch-viz/wiki).
 
 ## Developers
 
